@@ -1,0 +1,53 @@
+﻿@model IEnumerable<site_pessoal_dinamico.Models.experiencia_profissional>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.funcao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.empresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descricao_exp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.data)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.funcao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.empresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descricao_exp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.data)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.experiencia_profissionalId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.experiencia_profissionalId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.experiencia_profissionalId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

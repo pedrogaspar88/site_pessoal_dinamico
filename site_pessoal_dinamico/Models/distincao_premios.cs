@@ -9,6 +9,6 @@ namespace site_pessoal_dinamico.Models
     {
         public int distincao_premiosId { get; set; }
 
-        public string descricao { get; set; }
+        public string descricao_distincao { get; set; }
     }
 }

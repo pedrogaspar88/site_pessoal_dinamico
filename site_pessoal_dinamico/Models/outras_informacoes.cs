@@ -9,6 +9,6 @@ namespace site_pessoal_dinamico.Models
     {
         public int outras_informacoesId { get; set; }
 
-        public string descricao { get; set; }
+        public string descricao_informacao { get; set; }
     }
 }
