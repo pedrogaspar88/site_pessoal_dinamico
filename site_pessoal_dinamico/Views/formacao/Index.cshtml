@@ -4,56 +4,74 @@
     ViewData["Title"] = "Index";
 }
 
-@*<h1>Index</h1>*@
+<section class="resume-section" id="formacao">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Formação<span class="text-primary"> Académica</span></h2>
 
-<p>
-    <a asp-action="Create">Nova Formação</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.data)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nome_instituicao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nome_curso)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nivel)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.competencias)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.data)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nome_instituicao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nome_curso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nivel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.competencias)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.formacaoId" class="btn btn-warning">Editar</a>
-                <a asp-action="Details" asp-route-id="@item.formacaoId" class="btn btn-info">Detalhes</a>
-                <a asp-action="Delete" asp-route-id="@item.formacaoId" class="btn btn-danger">Apagar</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <p>
+            <a asp-action="Create">Nova Formação</a>
+        </p>
+
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0">Instituto Politécnico da Guarda</h3>
+                <div class="subheading mb-3">Mestrado</div>
+                <div>Sistemas Integrados de Gestão</div>
+                <p>Nível 7 QRQ</p>
+                <p>Competências</p>
+
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">01-2017 - Presente</span></div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.data)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.nome_instituicao)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.nome_curso)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.nivel)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.competencias)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.data)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nome_instituicao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nome_curso)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nivel)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.competencias)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.formacaoId" class="btn btn-warning">Editar</a>
+                            <a asp-action="Details" asp-route-id="@item.formacaoId" class="btn btn-info">Detalhes</a>
+                            <a asp-action="Delete" asp-route-id="@item.formacaoId" class="btn btn-danger">Apagar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

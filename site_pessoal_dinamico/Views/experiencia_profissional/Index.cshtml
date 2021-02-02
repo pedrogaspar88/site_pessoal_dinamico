@@ -4,50 +4,56 @@
     ViewData["Title"] = "Index";
 }
 
-@*<h1>Index</h1>*@
+<section class="resume-section" id="experiencia_profissional">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Experiência<span class="text-primary"> Profissional</span></h2>
 
-<p>
-    <a asp-action="Create">Nova Experiência Profissional</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.funcao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.empresa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.descricao_exp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.data)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.funcao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.empresa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.descricao_exp)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.data)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.experiencia_profissionalId" class="btn btn-warning">Editar</a>
-                <a asp-action="Details" asp-route-id="@item.experiencia_profissionalId" class="btn btn-info">Detalhes</a>
-                <a asp-action="Delete" asp-route-id="@item.experiencia_profissionalId" class="btn btn-danger">Apagar</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <p>
+            <a asp-action="Create">Nova Experiência Profissional</a>
+        </p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.funcao)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.empresa)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.descricao_exp)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.data)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.funcao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.empresa)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.descricao_exp)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.data)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.experiencia_profissionalId" class="btn btn-warning">Editar</a>
+                            <a asp-action="Details" asp-route-id="@item.experiencia_profissionalId" class="btn btn-info">Detalhes</a>
+                            <a asp-action="Delete" asp-route-id="@item.experiencia_profissionalId" class="btn btn-danger">Apagar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

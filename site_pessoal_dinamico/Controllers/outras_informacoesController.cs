@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using site_pessoal_dinamico.Data;
 using site_pessoal_dinamico.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace site_pessoal_dinamico.Controllers
 {
+    [Authorize(Roles = "Administrador,Gestor")]
     public class outras_informacoesController : Controller
     {
         private readonly SitePessoalBdContext _context;

@@ -6,7 +6,7 @@
 
 <section class="resume-section" id="outras_informacoes">
     <div class="resume-section-content">
-        <h2 class="mb-5">Outras <span class="text-primary">Informações</span></h2>
+        <h2 class="mb-5">Outras<span class="text-primary"> Informações</span></h2>
 
         <p>
             <a asp-action="Create">Novas Informações</a>
@@ -39,31 +39,3 @@
     </div>
 </section>
 
-@*<p>
-    <a asp-action="Create">Novas Informações</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.descricao_informacao)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.descricao_informacao)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.outras_informacoesId" class="btn btn-warning">Editar</a>
-                    <a asp-action="Details" asp-route-id="@item.outras_informacoesId" class="btn btn-info">Detalhes</a>
-                    <a asp-action="Delete" asp-route-id="@item.outras_informacoesId" class="btn btn-danger">Apagar</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>*@
