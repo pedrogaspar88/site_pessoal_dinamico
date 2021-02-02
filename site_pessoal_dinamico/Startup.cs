@@ -61,8 +61,8 @@ namespace site_pessoal_dinamico
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SitePessoalBdContext bd,
-            UserManager<IdentityUser> gestorUtilizadores)
+        public void ConfigureIApplicationBuilder app, IWebHostEnvironment env, SitePessoalBdContext bd,
+            UserManager<IdentityUser> gestorUtilizadores, RoleManager<IdentityRole> gestorRoles)
         {
             if (env.IsDevelopment())
             {
@@ -90,6 +90,7 @@ namespace site_pessoal_dinamico
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+            SeedData.InsereRolesAsync(gestorRoles).Wait();
             SeedData.InsereAdministradorPadraoAsync(gestorUtilizadores).Wait(); 
         }
     }
