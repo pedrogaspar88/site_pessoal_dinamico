@@ -56,7 +56,7 @@ namespace site_pessoal_dinamico.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("experiencia_profissionalId,funcao,empresa,descricao_exp,dataInico,dataFim")] experiencia_profissional experiencia_profissional)
+        public async Task<IActionResult> Create([Bind("experiencia_profissionalId,funcao,empresa,descricao_exp,dataInicio,dataFim")] experiencia_profissional experiencia_profissional)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace site_pessoal_dinamico.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("experiencia_profissionalId,funcao,empresa,descricao_exp,dataInico,dataFim")] experiencia_profissional experiencia_profissional)
+        public async Task<IActionResult> Edit(int id, [Bind("experiencia_profissionalId,funcao,empresa,descricao_exp,dataInicio,dataFim")] experiencia_profissional experiencia_profissional)
         {
             if (id != experiencia_profissional.experiencia_profissionalId)
             {

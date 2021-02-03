@@ -25,7 +25,10 @@
                         @Html.DisplayNameFor(model => model.descricao_exp)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.data)
+                        @Html.DisplayNameFor(model => model.dataInicio)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.dataFim)
                     </th>
                     <th></th>
                 </tr>
@@ -33,25 +36,28 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.funcao)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.empresa)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.descricao_exp)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.data)
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.experiencia_profissionalId" class="btn btn-warning">Editar</a>
-                            <a asp-action="Details" asp-route-id="@item.experiencia_profissionalId" class="btn btn-info">Detalhes</a>
-                            <a asp-action="Delete" asp-route-id="@item.experiencia_profissionalId" class="btn btn-danger">Apagar</a>
-                        </td>
-                    </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.funcao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.empresa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.descricao_exp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dataInicio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dataFim)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.experiencia_profissionalId" class="btn btn-warning">Editar</a>
+                        <a asp-action="Details" asp-route-id="@item.experiencia_profissionalId" class="btn btn-info">Detalhes</a>
+                        <a asp-action="Delete" asp-route-id="@item.experiencia_profissionalId" class="btn btn-danger">Apagar</a>
+                    </td>
+                </tr>
                 }
             </tbody>
         </table>

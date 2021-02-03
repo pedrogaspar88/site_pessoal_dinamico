@@ -16,9 +16,6 @@
             <thead>
                 <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.data)
-                    </th>
-                    <th>
                         @Html.DisplayNameFor(model => model.nome_instituicao)
                     </th>
                     <th>
@@ -30,34 +27,43 @@
                     <th>
                         @Html.DisplayNameFor(model => model.competencias)
                     </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.dataInicio)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.dataFim)
+                    </th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.data)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.nome_instituicao)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.nome_curso)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.nivel)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.competencias)
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.formacaoId" class="btn btn-warning">Editar</a>
-                            <a asp-action="Details" asp-route-id="@item.formacaoId" class="btn btn-info">Detalhes</a>
-                            <a asp-action="Delete" asp-route-id="@item.formacaoId" class="btn btn-danger">Apagar</a>
-                        </td>
-                    </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nome_instituicao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nome_curso)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nivel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.competencias)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dataInicio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dataFim)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.formacaoId" class="btn btn-warning">Editar</a>
+                        <a asp-action="Details" asp-route-id="@item.formacaoId" class="btn btn-info">Detalhes</a>
+                        <a asp-action="Delete" asp-route-id="@item.formacaoId" class="btn btn-danger">Apagar</a>
+                    </td>
+                </tr>
                 }
             </tbody>
         </table>
