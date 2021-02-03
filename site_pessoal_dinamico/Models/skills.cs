@@ -10,7 +10,8 @@ namespace site_pessoal_dinamico.Models
     {
         public int skillsId { get; set; }
 
-        [Required(ErrorMessage = "Este campo deve ser preenchido")] 
+        [Required(ErrorMessage = "Este campo deve ser preenchido")]
+        [Display(Name = "Descrição")]
         public string descricao_skills { get; set; }
     }
 }

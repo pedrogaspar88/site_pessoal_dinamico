@@ -23,6 +23,11 @@ namespace site_pessoal_dinamico.Controllers
             return View();
         }
 
+        public IActionResult SobreMim ()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

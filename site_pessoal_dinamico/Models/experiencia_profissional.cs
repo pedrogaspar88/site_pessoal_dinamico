@@ -10,11 +10,14 @@ namespace site_pessoal_dinamico.Models
         public int experiencia_profissionalId { get; set; }
 
         public string funcao { get; set; }
-
+ 
         public string empresa { get; set; }
 
         public string descricao_exp { get; set; }
 
-        public DateTime data { get; set; }
+        public DateTime dataInicio { get; set; }
+
+        public DateTime dataFim { get; set; }
+      
     }
 }

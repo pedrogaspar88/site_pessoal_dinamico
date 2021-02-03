@@ -11,6 +11,7 @@ namespace site_pessoal_dinamico.Models
         public int outras_informacoesId { get; set; }
 
         [Required(ErrorMessage = "Este campo deve ser preenchido")]
+        [Display(Name = "Descrição")]
         public string descricao_informacao { get; set; }
     }
 }

@@ -56,7 +56,7 @@ namespace site_pessoal_dinamico.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("formacaoId,data,nome_instituicao,nome_curso,nivel,competencias")] formacao formacao)
+        public async Task<IActionResult> Create([Bind("formacaoId,nome_instituicao,nome_curso,nivel,competencias,dataInico,dataFim")] formacao formacao)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace site_pessoal_dinamico.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("formacaoId,data,nome_instituicao,nome_curso,nivel,competencias")] formacao formacao)
+        public async Task<IActionResult> Edit(int id, [Bind("formacaoId,nome_instituicao,nome_curso,nivel,competencias,dataInico,dataFim")] formacao formacao)
         {
             if (id != formacao.formacaoId)
             {

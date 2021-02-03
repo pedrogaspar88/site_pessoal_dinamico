@@ -9,8 +9,6 @@ namespace site_pessoal_dinamico.Models
     {
         public int formacaoId { get; set; }
 
-        public DateTime data { get; set; }
-
         public string nome_instituicao { get; set; }
 
         public string nome_curso { get; set; }
@@ -18,5 +16,9 @@ namespace site_pessoal_dinamico.Models
         public string nivel { get; set; }
 
         public string competencias { get; set; }
+
+        public DateTime dataInicio { get; set; }
+
+        public DateTime dataFim { get; set; }
     }
 }

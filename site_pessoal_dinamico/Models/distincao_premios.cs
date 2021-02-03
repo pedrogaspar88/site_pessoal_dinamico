@@ -12,6 +12,7 @@ namespace site_pessoal_dinamico.Models
 
 
         [Required(ErrorMessage = "Este campo deve ser preenchido")] 
+        [Display(Name ="Descrição")]
         public string descricao_distincao { get; set; }
 
     }
