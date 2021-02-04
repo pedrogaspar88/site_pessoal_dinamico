@@ -91,7 +91,12 @@ namespace site_pessoal_dinamico
                 endpoints.MapRazorPages();
             });
             SeedData.InsereRolesAsync(gestorRoles).Wait();
-            SeedData.InsereAdministradorPadraoAsync(gestorUtilizadores).Wait(); 
+            SeedData.InsereAdministradorPadraoAsync(gestorUtilizadores).Wait();
+            if (env.IsDevelopment())
+            {
+                SeedData.PreencheDados(bd);
+
+            }
         }
     }
 }

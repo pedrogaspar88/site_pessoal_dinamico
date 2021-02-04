@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace site_pessoal_dinamico.Controllers
 {
-    [Authorize(Roles = "Administrador,Gestor")]
+    
     public class distincao_premiosController : Controller
     {
         private readonly SitePessoalBdContext _context;
@@ -46,6 +46,7 @@ namespace site_pessoal_dinamico.Controllers
         }
 
         // GET: distincao_premios/Create
+        [Authorize(Roles = "Administrador")]
         public IActionResult Create()
         {
             return View();
@@ -119,6 +120,7 @@ namespace site_pessoal_dinamico.Controllers
         }
 
         // GET: distincao_premios/Delete/5
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -139,6 +141,7 @@ namespace site_pessoal_dinamico.Controllers
         // POST: distincao_premios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var distincao_premios = await _context.distincao_premios.FindAsync(id);

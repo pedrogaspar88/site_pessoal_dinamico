@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace site_pessoal_dinamico.Controllers
 {
-    [Authorize(Roles = "Administrador,Gestor")]
+    
     public class experiencia_profissionalController : Controller
     {
         private readonly SitePessoalBdContext _context;
@@ -46,6 +46,7 @@ namespace site_pessoal_dinamico.Controllers
         }
 
         // GET: experiencia_profissional/Create
+        [Authorize(Roles = "Administrador")]
         public IActionResult Create()
         {
             return View();
@@ -68,6 +69,7 @@ namespace site_pessoal_dinamico.Controllers
         }
 
         // GET: experiencia_profissional/Edit/5
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -119,6 +121,7 @@ namespace site_pessoal_dinamico.Controllers
         }
 
         // GET: experiencia_profissional/Delete/5
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

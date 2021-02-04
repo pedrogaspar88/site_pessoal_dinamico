@@ -7,34 +7,39 @@
 <section class="resume-section" id="distincao_premios">
     <div class="resume-section-content">
         <h2 class="mb-5">Distinção e<span class="text-primary"> Prémios</span></h2>
-
-        <p>
-            <a asp-action="Create">Nova distinção</a>
-        </p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.descricao_distincao)
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
+        @if (User.IsInRole("Administrador"))
+        {
+            <p>
+                <a asp-action="Create">Nova distinção</a>
+            </p>
+        }
+            <table class="table">
+                <thead>
                     <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.descricao_distincao)
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.distincao_premiosId" class="btn btn-warning">Editar</a>
-                            <a asp-action="Details" asp-route-id="@item.distincao_premiosId" class="btn btn-info">Detalhes</a>
-                            <a asp-action="Delete" asp-route-id="@item.distincao_premiosId" class="btn btn-danger">Apagar</a>
-                        </td>
+                        <th>
+                            @Html.DisplayNameFor(model => model.descricao_distincao)
+                        </th>
+                        <th></th>
                     </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.descricao_distincao)
+                            </td>
+                            <td>
+                                @if (User.IsInRole("Administrador"))
+                                {
+                                    <a asp-action="Edit" asp-route-id="@item.distincao_premiosId" class="btn btn-warning">Editar</a>
+                                    <a asp-action="Details" asp-route-id="@item.distincao_premiosId" class="btn btn-info">Detalhes</a>
+                                    <a asp-action="Delete" asp-route-id="@item.distincao_premiosId" class="btn btn-danger">Apagar</a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
 </section>

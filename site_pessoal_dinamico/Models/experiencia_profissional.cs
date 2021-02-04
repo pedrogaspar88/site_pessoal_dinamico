@@ -13,15 +13,19 @@ namespace site_pessoal_dinamico.Models
         [Display(Name = "Função")] 
         public string funcao { get; set; }
 
+
         [Display(Name = "Nome da Empresa")] 
         public string empresa { get; set; }
+
 
         [Display(Name = "Descrição")]
         public string descricao_exp { get; set; }
 
+
         [DataType(DataType.Date)]
         [Display(Name = "Data Início")]
         public DateTime dataInicio { get; set; }
+
 
         [DataType(DataType.Date)]
         [Display(Name = "Data Fim")]
