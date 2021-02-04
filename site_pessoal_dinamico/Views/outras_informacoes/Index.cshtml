@@ -33,7 +33,7 @@
                                 @if (User.IsInRole("Administrador"))
                                 {
                                     <a asp-action="Edit" asp-route-id="@item.outras_informacoesId" class="btn btn-warning">Editar</a>
-                                    <a asp-action="Details" asp-route-id="@item.outras_informacoesId" class="btn btn-info">Detalhes</a>
+                                    <a asp-action="Details" asp-route-id="@item.outras_informacoesId" class="btn btn-primary">Detalhes</a>
                                     <a asp-action="Delete" asp-route-id="@item.outras_informacoesId" class="btn btn-danger">Apagar</a>
                                 }
                             </td>

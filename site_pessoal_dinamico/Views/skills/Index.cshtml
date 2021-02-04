@@ -33,7 +33,7 @@
                                 @if (User.IsInRole("Administrador"))
                                 {
                                     <a asp-action="Edit" asp-route-id="@item.skillsId" class="btn btn-warning">Editar</a>
-                                    <a asp-action="Details" asp-route-id="@item.skillsId" class="btn btn-info">Detalhes</a>
+                                    <a asp-action="Details" asp-route-id="@item.skillsId" class="btn btn-primary">Detalhes</a>
                                     <a asp-action="Delete" asp-route-id="@item.skillsId" class="btn btn-danger">Apagar</a>
                                 }
                             </td>
@@ -43,4 +43,3 @@
             </table>
         </div>
 </section>
-@*<p>A mostrar página @Model.Paginacao.PaginaAtual de @Model.Paginacao.TotalPaginas</p>*@
