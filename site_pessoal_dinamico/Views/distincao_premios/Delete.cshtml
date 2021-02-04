@@ -4,24 +4,28 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Apagar</h1>
+<section class="resume-section" id="distincao_premios">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Apagar</h2>
 
-<h4 class="text-danger">Tem a certeza que pretende apagar?</h4>
-<div>
-    <h4>Distinção e Prémios</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.descricao_distincao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.descricao_distincao)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="distincao_premiosId" />
-        <input type="submit" value="Eliminar" class="btn btn-danger" /> 
-        <a asp-action="Index">Cancelar</a>
-    </form>
-</div>
+       
+        <div>
+            <h4 class="mb-5">Distinção e<span class="text-primary"> Prémios</span></h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.descricao_distincao)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.descricao_distincao)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="distincao_premiosId" />
+                <input type="submit" value="Eliminar" class="btn btn-danger" />
+                <a asp-action="Index">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</section>

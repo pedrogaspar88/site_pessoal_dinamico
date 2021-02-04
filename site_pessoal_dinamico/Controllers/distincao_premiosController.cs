@@ -9,6 +9,7 @@ using site_pessoal_dinamico.Data;
 using site_pessoal_dinamico.Models;
 using Microsoft.AspNetCore.Authorization;
 
+
 namespace site_pessoal_dinamico.Controllers
 {
     

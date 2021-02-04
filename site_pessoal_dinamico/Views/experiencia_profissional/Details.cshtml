@@ -4,45 +4,49 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Detalhes</h1>
+<section class="resume-section" id="distincao_premios">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Detalhes</h2>
 
-<div>
-    <h4>Experiência Profissional</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.funcao)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.funcao)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.empresa)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.empresa)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.descricao_exp)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.descricao_exp)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.dataInicio)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.dataInicio)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.dataFim)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.dataFim)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.experiencia_profissionalId">Editar</a> |
-    <a asp-action="Index">Voltar à lista</a>
-</div>
+        <div>
+            <h4 class="mb-5">Experiência <span class="text-primary"> Profissional</span></h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.funcao)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.funcao)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.empresa)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.empresa)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.descricao_exp)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.descricao_exp)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.dataInicio)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.dataInicio)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.dataFim)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.dataFim)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.experiencia_profissionalId">Editar</a> |
+            <a asp-action="Index">Voltar à lista</a>
+        </div>
+    </div>
+</section>

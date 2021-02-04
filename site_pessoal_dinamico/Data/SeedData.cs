@@ -40,7 +40,7 @@ namespace site_pessoal_dinamico.Data
             await CriaRoleSeNecessario(gestorRoles, ROLE_ADIMINISTRADOR);
             //await CriaRoleSeNecessario(gestorRoles, ROLE_CLIENTE);
             await CriaRoleSeNecessario(gestorRoles, ROLE_GESTOR);
-            //await CriaRoleSeNecessario(gestorRoles, "PodeAlterarPrecoProdutos");
+            
         }
 
         private static async Task CriaRoleSeNecessario(RoleManager<IdentityRole> gestorRoles, string funcao)
@@ -88,9 +88,9 @@ namespace site_pessoal_dinamico.Data
                 new distincao_premios
                 {
                     descricao_distincao="Participação na 16º edição do concurso Poliempreende(Concurso de Vocação Empresarial).Destaque para: " +
-                    "1º lugar a nível regional " +
-                    "3º lugar a nível nacional " +
-                    "Com o projeto HEF(Hydroponic Evolution Farm)"
+                    " 1º lugar a nível regional, " +
+                    " 3º lugar a nível nacional, " +
+                    " Com o projeto HEF(Hydroponic Evolution Farm)"
                 },
             });
             bd.SaveChanges();
@@ -151,10 +151,10 @@ namespace site_pessoal_dinamico.Data
                     nome_instituicao="Instituto Politécnico da Guarda",
                     nome_curso="Sistemas Integrados de Gestão",
                     nivel= "Nível 7",
-                    competencias="Integrar os diferentes sistemas de gestão, especificamente de responsabilidade social, qualidade, ambiente e segurança no trabalho, com a gestão da prevenção e riscos, de forma a aproveitar sinergias" +
-                                  "Realizar auditorias, na forma individualizada ou integrada, aos sistemas de gestão",
+                    competencias="Integrar os diferentes sistemas de gestão, especificamente de responsabilidade social, qualidade, ambiente e segurança no trabalho, com a gestão da prevenção e riscos, de forma a aproveitar sinergias, " +
+                                  " Realizar auditorias na forma individualizada ou integrada, aos sistemas de gestão",
                     dataInicio= new DateTime(2017,01,13),
-                    dataFim=new DateTime(),
+                    dataFim=new DateTime(2022,06,06),
 
                 },
                   new formacao
@@ -162,9 +162,9 @@ namespace site_pessoal_dinamico.Data
                     nome_instituicao="Universidade da Beira Interior",
                     nome_curso="Bioquímica",
                     nivel= "Nível 6",
-                    competencias="Execução de procedimentos laboratoriais utilizados no estudo dos microrganismos seguindo as normas de segurança em microbiologia"+
-                                   "Conhecimentos fundamentais de química nomeadamente sobre as teorias da ligação química, leis de gases, sólidos cristalinos e termodinâmica química" +
-                                   "Monitorização de linhas de água através da determinação de sólidos, CQO, CBO, azoto Kjeldahl e Amoniacal e fósforo, bem como ensaios de respirometria",
+                    competencias="Execução de procedimentos laboratoriais utilizados no estudo dos microrganismos seguindo as normas de segurança em microbiologia,"+
+                                   " Conhecimentos fundamentais de química nomeadamente sobre as teorias da ligação química, leis de gases, sólidos cristalinos e termodinâmica química," +
+                                   " Monitorização de linhas de água através da determinação de sólidos, CQO, CBO, azoto Kjeldahl e Amoniacal e fósforo, bem como ensaios de respirometria",
                     dataInicio=new DateTime(2006,09,04),
                     dataFim=new DateTime(2016,06,05),
                 }
@@ -177,13 +177,14 @@ namespace site_pessoal_dinamico.Data
 
 
             bd.experiencia_profissional.AddRange(new experiencia_profissional[] {
+    
                 new experiencia_profissional
                 {
                     funcao = "Corporate Functional Safety Test Technican",
                     empresa = "Coficab",
-                    descricao_exp = "Apoiar na análise dos registos de qualidade associados ao plano de controlo" +
-                                    "Apoiar nos ajustes ao plano de controlo/processo",
-                    dataInicio = new DateTime (2018,04,05),
+                    descricao_exp = "Apoiar na análise dos registos de qualidade associados ao plano de controlo," +
+                                    " Apoiar nos ajustes ao plano de controlo/processo",
+                    dataInicio = new DateTime(2018,04,05),
                     dataFim = new DateTime(2019,02,01),
 
 
@@ -192,8 +193,8 @@ namespace site_pessoal_dinamico.Data
                 {
                     funcao = "Químico",
                     empresa = "Universidade da Beira Interior",
-                    descricao_exp = "Produção de celulose nanofibrilada a partir de celulose de madeira" +
-                                    "Conversão do gel de celulose em filamento através de um processo de extrusão com posterior troca de solvente",
+                    descricao_exp = "Produção de celulose nanofibrilada a partir de celulose de madeira," +
+                                    " Conversão do gel de celulose em filamento através de um processo de extrusão com posterior troca de solvente",
                     dataInicio = new DateTime (2017,06,01),
                     dataFim = new DateTime (2017,07,30),
 
